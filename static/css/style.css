@@ -1,0 +1,16 @@
+body {
+    background-color: #bfb;
+}
+
+p {
+color: red;
+}
+h3 {
+color: green;
+}
+
+p {
+  color: red;
+  width: 500px;
+  border: 1px solid black;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Message</h1>
+    <form method="POST" action="/add_messages">
+        <input type="text" name="url">
+        <button type="submit">Жми</button>
+    </form>
+
+        <h3>Message</h3>
+        {% for message in coll %} 
+        <form method="POST" action="/del_messages">
+            <div> {{ message['text'] }} {{ message['price'] }}
+                <button type="submit" name="q" value="{{ message['_id'] }}">button</button>  
+            </div>
+        </form> 
+        {% endfor %}
+        <p> {{ q }} </p>
+    <div>{{ a }}</div>
+</body>
+</html>
